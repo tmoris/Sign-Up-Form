@@ -1,0 +1,13 @@
+.container {
+  inline-size: 80%;
+  max-inline-size: 64em;
+  margin-inline: auto;
+}
+
+.flex-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  block-size: 100vh;
+}
