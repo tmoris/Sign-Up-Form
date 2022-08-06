@@ -24,22 +24,22 @@
     </header>
     <main class="main">
       <div class="form-header">
-        <p>This isn't a real online service! You know you need something like this in your life to help you realize
+        <p class="form-header__text">This isn't a real online service! You know you need something like this in your life to help you realize
           deepest dreams. </p>
-        <p>you know you want to</p>
+        <p class="form-header__text">you know you want to</p>
       </div>
-      <form action="#" method="POST">
-        <h2>let's do this!</h2>
+      <form action="#" method="POST" class="form">
+        <h2 class="form-title">let's do this!</h2>
       <fieldset class="form-container">
         <div class="form-group">
           <label for="firstname" class="form-label">first name</label>
-          <input id="firstname" type="text" name="first_Name" placeholder="thor" class="form-control" pattern="[a-zA-Z\d\.\-\_]{1,20}  " title=" letters (either case), numbers, hyphens, underscores, and periods.The username must start with a letter and must be between 1 and 20 characters long (inclusive)" required>
+          <input id="firstname" type="text" name="first_Name" placeholder="thor" class="form-control" pattern="/^[a-zA-Z '.-]*$/{1,20}  " title=" letters (either case), numbers, hyphens, underscores, and periods.The username must start with a letter and must be between 1 and 20 characters long (inclusive)" required>
           <small class="small-text">*invalid first name</small>
         </div>
 
         <div class="form-group">
           <label for="lastname" class="form-label">last name</label>
-          <input id="lastname" type="text" class="form-control" name="last_Name" placeholder="odinson" pattern="[a-zA-Z\d\.\-\_]{1,20} " title=" letters (either case), numbers, hyphens, underscores, and periods.The username must start with a letter and must be between 1 and 20 characters long (inclusive)" required>
+          <input id="lastname" type="text" class="form-control" name="last_Name" placeholder="odinson" pattern="/^[a-zA-Z '.-]*$/{1,20} " title=" letters (either case), numbers, hyphens, underscores, and periods.The username must start with a letter and must be between 1 and 20 characters long (inclusive)" required>
           <small class="small-text">*invalid last name</small>
         </div>
         <div class="form-group">
@@ -64,9 +64,9 @@
             <small class="small-text">*password don't match</small>
         </div>
       </fieldset>
-      <div class="form-footer">
-        <fieldset class="form-group">
-<button type="submit" name="form-submit _Button" value="create-account" id="submit-button">create account</button>
+      <div class="form-group form-footer" >
+        <fieldset class="form-footer__container">
+<button type="submit" name="form-submit _Button" value="create-account" id="submit-button" class="form-button">create account</button>
 <p>already have an account? <a href="#">login</a></p>
         </fieldset>
       </div>
