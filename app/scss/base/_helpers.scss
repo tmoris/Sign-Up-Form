@@ -1,16 +1,22 @@
+@use "../abstracts/mixin" as mixn;
 .container {
   inline-size: 80%;
   max-inline-size: 64em;
   margin-inline: auto;
+ 
 }
 .grid-container {
   display: grid;
-  grid-template-columns:  1fr;
-  gap: 1em;
+  grid-template-columns: 1fr;
+  @include mixn.mq(43.75em){
+   grid-template-columns: 1fr 2fr;
+  }
+ 
 }
 .flex-centered {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
