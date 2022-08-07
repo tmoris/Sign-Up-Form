@@ -70,13 +70,13 @@ position: relative;
 
   &:valid {
     border: 0.0635em solid var.$green;
-    background-image: url('/app/imgs/checkbox-marked-circle.svg');
+    background-image: url('/dist/css/imgs/checkbox-marked-circle.svg');
     background-position: 98%;
     background-repeat: no-repeat;
   }
   &:invalid:not(:focus):not(:placeholder-shown) {
     border: 0.0635em solid var.$red;
-    background-image: url("/app/imgs/close-circle.svg");
+    background-image: url("/dist/css/imgs/close-circle.svg");
     background-position: 98%;
     background-repeat: no-repeat;
   }
@@ -132,17 +132,8 @@ grid-area: form-title ;
 .small-text {
 display: none;
 }
-.small-text:invalid {
+
+.small-text:invalid:focus:not(:placeholder-shown) {
   color: var.$red-light;
   display: block;
-}
-.alert-danger {
-  background-color: var.$red-light;
-  color: var.$red-dark;
-  visibility: hidden;
-}
-.alert-success {
-  background-color: var.$green-light;
-  color: var.$green-dark;
-  visibility: hidden;
 }
