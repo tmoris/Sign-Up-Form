@@ -1,139 +1,165 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixin" as mixn;
+
 .main {
   margin-block: 2em;
   background-color: #f9f9f9;
   line-height: 0.5;
+
   @include mixn.mq(43.75em) {
     margin-block: 0;
     margin-block-start: 1em;
   }
 }
+
 .form {
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-background-color: #f9f9f9;
-color: inherit;
-padding: 1em;
-& > * {
-flex: auto;
-}
-&-header {
-  padding: 1em;
-  line-height: 1.5;
-  font-weight: 500;
-  
-  
-  &__text {
-    text-align: center;
-    @include mixn.mq(43.75em) {
-  text-align: start;
-    }
-  
-    &::first-letter {
-      text-transform: uppercase;
-    }
-    &:last-child{
-      margin-block-end: 0;
-    }
-  }
-  }
-&__title {
-letter-spacing: 0.0635em;
-}
- &-group {
-margin-block-end: 1em;
-position: relative;
-&:last-child {
-  margin-block-end: 0;
-  padding-inline-start: 0.5em;
-}
-}
-
-&-label {
-  display: block;
-  text-transform: uppercase;
-  line-height: 1;
-  margin-block-end: 0.25em;
-  opacity: 0.5;
-}
-&-control {
-  inline-size: 100%;
-  padding: 0.35em 1em;
-  background-color: var.$clr-GrayishBlue;
-  border-radius: 0.25em;
-  border: 0;
-   border-block-end: 0.0635em solid var.$black;
-   opacity: 0.6;
-  
-
-  &:valid {
-    border: 0.0635em solid var.$green;
-    background-image: url('../css/imgs/checkbox-marked-circle.svg');
-    background-position: 98%;
-    background-repeat: no-repeat;
-  }
-  &:invalid:not(:focus):not(:placeholder-shown) {
-    border: 0.0635em solid var.$red;
-    background-image: url("../css/imgs/close-circle.svg");
-    background-position: 98%;
-    background-repeat: no-repeat;
-  }
-  &:hover, &:focus {
-    border: 0.0635em solid var.$black;
-  }
- 
-  
-}
-&-button {
-  display: inline-block;
-  cursor: pointer;
-  background-color: var.$green-dark;
-  color: var.$white;
-  border: transparent;
-  padding: 0.5em 1em;
-  border-radius: 0.25em;
-  text-transform: capitalize;
-  margin-block: 2em;
-  transition: 250ms cubic-bezier(0.47, 0, 0.745, 0.715) 100ms;
-  &:hover, &:focus {
-background-color: var.$white;
-color: var.$green-dark;
-border: 0.0635em solid var.$green-dark;
-transform: scale(1.1);
-  }
-}
-& a {
-  color: var.$green-dark;
-  padding: 0.25em 0.75em;
-}
- &-container {
-   background-color: var.$white;
-   box-shadow: 0 0 0 100vmax var.$white;
-   clip-path: inset( 0 -100vmax);
-  @include mixn.mq(37.5em) {
-    display: grid;
-     grid-template-columns: repeat(2, 1fr);
-   grid-template-areas: 'form-title form-title'
-   'form-control form-control';
-   column-gap: 1em;
-  }
-  
- }
- &-title {
-grid-area: form-title ;
- }
- &-footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   background-color: #f9f9f9;
- }
+  color: inherit;
+  padding: 1em;
+
+  &>* {
+    flex: auto;
+  }
+
+  &-header {
+    padding: 1em;
+    line-height: 1.5;
+    font-weight: 500;
+
+
+    &__text {
+      text-align: center;
+
+      @include mixn.mq(43.75em) {
+        text-align: start;
+      }
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+
+      &:last-child {
+        margin-block-end: 0;
+      }
+    }
+  }
+
+  &__title {
+    letter-spacing: 0.0635em;
+  }
+
+  &-group {
+    margin-block-end: 1em;
+    position: relative;
+
+    &:last-child {
+      margin-block-end: 0;
+      padding-inline-start: 0.5em;
+    }
+  }
+
+  &-label {
+    display: block;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-block-end: 0.25em;
+    opacity: 0.5;
+  }
+
+  &-control {
+    inline-size: 100%;
+    padding: 0.35em 1em;
+    background-color: var.$clr-GrayishBlue;
+    border-radius: 0.25em;
+    border: 0;
+    border-block-end: 0.0635em solid var.$black;
+    opacity: 0.6;
+
+
+    &:valid {
+      border: 0.0635em solid var.$green;
+      background-image: url('../css/imgs/checkbox-marked-circle.svg');
+      background-position: 98%;
+      background-repeat: no-repeat;
+      background-color: var.$green-light;
+    }
+
+    &:invalid:not(:focus):not(:placeholder-shown) {
+      border: 0.0635em solid var.$red;
+      background-image: url("../css/imgs/close-circle.svg");
+      background-position: 98%;
+      background-repeat: no-repeat;
+      background-color: var.$red-light;
+
+      &~.small-text {
+        display: block;
+        color: var.$red;
+        padding-block-start: 0.5em;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      border: 0.0635em solid var.$black;
+    }
+
+
+  }
+
+  &-button {
+    display: inline-block;
+    cursor: pointer;
+    background-color: var.$green-dark;
+    color: var.$white;
+    border: transparent;
+    padding: 0.5em 1em;
+    border-radius: 0.25em;
+    text-transform: capitalize;
+    margin-block: 2em;
+    transition: 250ms cubic-bezier(0.47, 0, 0.745, 0.715) 100ms;
+    font-size: 1em;
+
+    &:hover,
+    &:focus {
+      background-color: var.$white;
+      color: var.$green-dark;
+      border: 0.0635em solid var.$green-dark;
+      transform: scale(1.1);
+    }
+  }
+
+  & a {
+    color: var.$green-dark;
+    padding: 0.25em 0.75em;
+  }
+
+  &-container {
+    background-color: var.$white;
+    box-shadow: 0 0 0 100vmax var.$white;
+    clip-path: inset(0 -100vmax);
+
+    @include mixn.mq(37.5em) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 'form-title form-title'
+        'form-control form-control';
+      column-gap: 1em;
+    }
+
+  }
+
+  &-title {
+    grid-area: form-title;
+  }
+
+  &-footer {
+    background-color: #f9f9f9;
+  }
 }
 
 .small-text {
-display: none;
-}
-
-.small-text:invalid:focus:not(:placeholder-shown) {
-  color: var.$red-light;
-  display: block;
+  display: none;
 }

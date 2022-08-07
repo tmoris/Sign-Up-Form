@@ -298,24 +298,44 @@ small, .text_small {
   background-image: url("../css/imgs/checkbox-marked-circle.svg");
   background-position: 98%;
   background-repeat: no-repeat;
+  background-color: hsl(153deg, 31%, 86%);
 }
 .form-control:invalid:not(:focus):not(:-moz-placeholder-shown) {
   border: 0.0635em solid hsl(0deg, 100%, 74%);
   background-image: url("../css/imgs/close-circle.svg");
   background-position: 98%;
   background-repeat: no-repeat;
+  background-color: hsl(355deg, 70%, 91%);
 }
 .form-control:invalid:not(:focus):not(:-ms-input-placeholder) {
   border: 0.0635em solid hsl(0deg, 100%, 74%);
   background-image: url("../css/imgs/close-circle.svg");
   background-position: 98%;
   background-repeat: no-repeat;
+  background-color: hsl(355deg, 70%, 91%);
 }
 .form-control:invalid:not(:focus):not(:placeholder-shown) {
   border: 0.0635em solid hsl(0deg, 100%, 74%);
   background-image: url("../css/imgs/close-circle.svg");
   background-position: 98%;
   background-repeat: no-repeat;
+  background-color: hsl(355deg, 70%, 91%);
+}
+.form-control:invalid:not(:focus):not(:-moz-placeholder-shown) ~ .small-text {
+  display: block;
+  color: hsl(0deg, 100%, 74%);
+  padding-block-start: 0.5em;
+}
+.form-control:invalid:not(:focus):not(:-ms-input-placeholder) ~ .small-text {
+  display: block;
+  color: hsl(0deg, 100%, 74%);
+  padding-block-start: 0.5em;
+}
+.form-control:invalid:not(:focus):not(:placeholder-shown) ~ .small-text {
+  display: block;
+  color: hsl(0deg, 100%, 74%);
+  -webkit-padding-before: 0.5em;
+          padding-block-start: 0.5em;
 }
 .form-control:hover, .form-control:focus {
   border: 0.0635em solid hsl(0deg, 0%, 13%);
@@ -331,6 +351,7 @@ small, .text_small {
   text-transform: capitalize;
   margin-block: 2em;
   transition: 250ms cubic-bezier(0.47, 0, 0.745, 0.715) 100ms;
+  font-size: 1em;
 }
 .form-button:hover, .form-button:focus {
   background-color: hsl(0deg, 0%, 100%);
@@ -366,19 +387,4 @@ small, .text_small {
 
 .small-text {
   display: none;
-}
-
-.small-text:invalid:focus:not(:-moz-placeholder-shown) {
-  color: hsl(355deg, 70%, 91%);
-  display: block;
-}
-
-.small-text:invalid:focus:not(:-ms-input-placeholder) {
-  color: hsl(355deg, 70%, 91%);
-  display: block;
-}
-
-.small-text:invalid:focus:not(:placeholder-shown) {
-  color: hsl(355deg, 70%, 91%);
-  display: block;
 }/*# sourceMappingURL=main.css.map */
