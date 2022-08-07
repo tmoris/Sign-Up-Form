@@ -58,6 +58,8 @@ img {
 ::placeholder {
   font-family: inherit;
   text-transform: capitalize;
+  font-size: 0.8rem;
+  opacity: 0.5;
 }
 :focus {
   outline: 0.0635em solid var.$Blue;
@@ -80,10 +82,10 @@ html {
 }
 
 body {
-  background: white;
+  background: var.$white;
   font-family: 'Source Code Pro', monospace;
   font-weight: 400;
   line-height: 1.75;
-  color: #000000;
+  color: var.$black;
 }
 
