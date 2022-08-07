@@ -21,21 +21,20 @@ This is a solution to the [The Odin Project Sign-Up-Form project](https://www.th
 
 ### The challenge
 
-Users should be able to:
-
-- sign-up form should be client-side validated,
+- Sign-up form should be client-side validated,
 - With optimal layout a cross different screen size devices
 
 ### Screenshot
 
-!
+!![Screenshot 2022-08-07 at 09-48-09 Sign-Up-Form](https://user-images.githubusercontent.com/57036823/183278003-e43d0ff1-1994-48aa-86d1-630e447f533b.png)
+
 
 
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL:https://github.com/tmoris/Sign-Up-Form
+- Live Site URL:https://tmoris.github.io/Sign-Up-Form/
 
 ## My process
 
@@ -44,7 +43,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - Flexbox
 - CSS Grid
--scss- 
+-Scss
 
 
 
@@ -52,7 +51,7 @@ Users should be able to:
 
 While working on this project i have learnt
 how to:- use CSS grid for styling page  and create reponsive layouts.
-I have also learnt;  how organize work using scss partial files,  use of mixins and accessing of scss variables. using @use.
+organize work using scss partial files, use of mixins and accessing of scss variables using @use.
 I have also leart client-side form validations.
 
 
