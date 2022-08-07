@@ -295,25 +295,25 @@ small, .text_small {
 }
 .form-control:valid {
   border: 0.0635em solid hsl(154deg, 59%, 51%);
-  background-image: url("/dist/css/imgs/checkbox-marked-circle.svg");
+  background-image: url("../css/imgs/checkbox-marked-circle.svg");
   background-position: 98%;
   background-repeat: no-repeat;
 }
 .form-control:invalid:not(:focus):not(:-moz-placeholder-shown) {
   border: 0.0635em solid hsl(0deg, 100%, 74%);
-  background-image: url("/dist/css/imgs/close-circle.svg");
+  background-image: url("../css/imgs/close-circle.svg");
   background-position: 98%;
   background-repeat: no-repeat;
 }
 .form-control:invalid:not(:focus):not(:-ms-input-placeholder) {
   border: 0.0635em solid hsl(0deg, 100%, 74%);
-  background-image: url("/dist/css/imgs/close-circle.svg");
+  background-image: url("../css/imgs/close-circle.svg");
   background-position: 98%;
   background-repeat: no-repeat;
 }
 .form-control:invalid:not(:focus):not(:placeholder-shown) {
   border: 0.0635em solid hsl(0deg, 100%, 74%);
-  background-image: url("/dist/css/imgs/close-circle.svg");
+  background-image: url("../css/imgs/close-circle.svg");
   background-position: 98%;
   background-repeat: no-repeat;
 }
